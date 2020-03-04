@@ -1,0 +1,69 @@
+input {
+    width: 100px;
+    height: 40px;
+    border: 1.5px solid black;
+    text-align:center;
+}
+
+
+div.left {
+    position: absolute;
+    top: 32%;
+    left: 0;
+}
+
+button {
+    margin-top: 2%;
+    text-transform: capitalize;
+}
+
+div.flex {
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+button.calculate {
+    width: 72%;
+    border-radius: 0;
+}
+
+button.reset {
+    width: 72%;
+    border-radius: 0;
+}
+
+div.bottom {
+    display:flex;
+    position:relative;
+    justify-content:center;
+    flex-wrap:wrap;
+    width: 72%;
+    margin:5% 30% 6% 30%;
+}
+
+p.error {
+    color: red;
+    width:100%;
+    text-align:center;
+    position:absolute;
+    top: 100%;
+}
+
+/* This Section is to remove the arrows from the Input number type */
+/* for moz */
+input[type=number] {
+    -moz-appearance:textfield;
+    }
+
+/* for everything else */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+

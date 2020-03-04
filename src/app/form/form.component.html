@@ -1,0 +1,42 @@
+<div class = "flex">
+    <div class = "left">
+        <!--left side input-->
+        <label for = "leftA"></label>
+        <input     
+            id = "leftA"
+            type = "number" 
+            name = "left" 
+            [(ngModel)] = "leftA"
+        >
+        <!--Check if input is 0 or negative and throw warning-->
+            <p 
+                *ngIf = "leftA == 0 || sign(leftA) == -1"
+                class = "error">{{error}}</p>
+    </div>
+    <!--result component-->
+    <div *ngIf = "show">
+        <app-results [result] = "result"></app-results>
+    </div>
+    <!-- to do: change triangle size with input -->
+    <app-triangle></app-triangle>
+    <div class = "bottom">
+        <!--bottom side input-->
+        <label for = "bottomB"></label>
+        <input     
+            id = "bottomB"
+            type = "number" 
+            name = "bottom" 
+            [(ngModel)] = "bottomB"
+        >
+        <!--check if input is 0 or negative and throw warning-->
+        <p 
+            *ngIf = "bottomB == 0 || sign(bottomB) == -1" 
+            class = "error">{{error}}</p>
+    </div>
+    <button 
+        class = "calculate btn btn-primary" 
+        (click) = "handleSubmit()">calculate!</button>
+    <button 
+        class = "reset btn btn-danger" 
+        (click) = "reset()">reset</button>
+</div>
